@@ -1,0 +1,135 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/07/29 13:59:09 WARN Utils: Your hostname, Abhilash, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/07/29 13:59:09 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/07/29 13:59:11 INFO SparkContext: Running Spark version 4.1.1
+26/07/29 13:59:11 INFO SparkContext: OS info Linux, 6.18.33.1-microsoft-standard-WSL2, amd64
+26/07/29 13:59:11 INFO SparkContext: Java version 21.0.11+10-1-24.04.2-Ubuntu
+26/07/29 13:59:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/07/29 13:59:11 INFO ResourceUtils: ==============================================================
+26/07/29 13:59:11 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/07/29 13:59:11 INFO ResourceUtils: ==============================================================
+26/07/29 13:59:11 INFO SparkContext: Submitted application: WordCountChallenge1
+26/07/29 13:59:11 INFO SecurityManager: Changing view acls to: abhilash
+26/07/29 13:59:11 INFO SecurityManager: Changing modify acls to: abhilash
+26/07/29 13:59:11 INFO SecurityManager: Changing view acls groups to: abhilash
+26/07/29 13:59:11 INFO SecurityManager: Changing modify acls groups to: abhilash
+26/07/29 13:59:11 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: abhilash groups with view permissions: EMPTY; users with modify permissions: abhilash; groups with modify permissions: EMPTY; RPC SSL disabled
+26/07/29 13:59:11 INFO Utils: Successfully started service 'sparkDriver' on port 42723.
+26/07/29 13:59:11 INFO SparkEnv: Registering MapOutputTracker
+26/07/29 13:59:11 INFO SparkEnv: Registering BlockManagerMaster
+26/07/29 13:59:12 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/07/29 13:59:12 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/07/29 13:59:12 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/07/29 13:59:12 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-05798a3d-fd94-46b5-9167-86d95b9a025c
+26/07/29 13:59:12 INFO SparkEnv: Registering OutputCommitCoordinator
+26/07/29 13:59:12 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/07/29 13:59:12 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/07/29 13:59:12 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/07/29 13:59:12 INFO ResourceProfile: Limiting resource is cpu
+26/07/29 13:59:12 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/07/29 13:59:12 INFO SecurityManager: Changing view acls to: abhilash
+26/07/29 13:59:12 INFO SecurityManager: Changing modify acls to: abhilash
+26/07/29 13:59:12 INFO SecurityManager: Changing view acls groups to: abhilash
+26/07/29 13:59:12 INFO SecurityManager: Changing modify acls groups to: abhilash
+26/07/29 13:59:12 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: abhilash groups with view permissions: EMPTY; users with modify permissions: abhilash; groups with modify permissions: EMPTY; RPC SSL disabled
+26/07/29 13:59:12 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/07/29 13:59:12 INFO Executor: OS info Linux, 6.18.33.1-microsoft-standard-WSL2, amd64
+26/07/29 13:59:12 INFO Executor: Java version 21.0.11+10-1-24.04.2-Ubuntu
+26/07/29 13:59:12 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/07/29 13:59:12 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1fb33600 for default.
+26/07/29 13:59:12 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34249.
+26/07/29 13:59:12 INFO NettyBlockTransferService: Server created on 10.255.255.254:34249
+26/07/29 13:59:12 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/07/29 13:59:12 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 34249, None)
+26/07/29 13:59:12 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:34249 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 34249, None)
+26/07/29 13:59:12 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 34249, None)
+26/07/29 13:59:12 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 34249, None)
+26/07/29 13:59:16 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/07/29 13:59:16 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 242.3 KiB, free 434.2 MiB)
+26/07/29 13:59:16 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 36.9 KiB, free 434.1 MiB)
+26/07/29 13:59:16 INFO SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+26/07/29 13:59:17 INFO FileInputFormat: Total input files to process : 1
+
+=== WORDS LONGER THAN 3 CHARACTERS ===
+26/07/29 13:59:17 INFO SparkContext: Starting job: collect at /home/abhilash/Spark-Exercise-1/challenge1.py:15
+26/07/29 13:59:17 INFO DAGScheduler: Registering RDD 3 (reduceByKey at /home/abhilash/Spark-Exercise-1/challenge1.py:11) as input to shuffle 0
+26/07/29 13:59:17 INFO DAGScheduler: Got job 0 (collect at /home/abhilash/Spark-Exercise-1/challenge1.py:15) with 2 output partitions
+26/07/29 13:59:17 INFO DAGScheduler: Final stage: ResultStage 1 (collect at /home/abhilash/Spark-Exercise-1/challenge1.py:15)
+26/07/29 13:59:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+26/07/29 13:59:17 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+26/07/29 13:59:17 INFO DAGScheduler: Missing parents found for ResultStage 1: List(ShuffleMapStage 0)
+26/07/29 13:59:17 INFO DAGScheduler: Missing parents found for ShuffleMapStage 0: List()
+26/07/29 13:59:17 INFO DAGScheduler: Submitting ShuffleMapStage 0 (PairwiseRDD[3] at reduceByKey at /home/abhilash/Spark-Exercise-1/challenge1.py:11), which has no missing parents
+26/07/29 13:59:17 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 15.6 KiB, free 434.1 MiB)
+26/07/29 13:59:17 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 8.7 KiB, free 434.1 MiB)
+26/07/29 13:59:17 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1686
+26/07/29 13:59:17 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (PairwiseRDD[3] at reduceByKey at /home/abhilash/Spark-Exercise-1/challenge1.py:11) (first 15 tasks are for partitions Vector(0, 1))
+26/07/29 13:59:17 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0
+26/07/29 13:59:17 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9683 bytes) 
+26/07/29 13:59:17 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9683 bytes) 
+26/07/29 13:59:17 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+26/07/29 13:59:17 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+26/07/29 13:59:17 INFO HadoopRDD: Task (TID 0) input split: file:/home/abhilash/Spark-Exercise-1/sample.txt:0+41
+26/07/29 13:59:17 INFO HadoopRDD: Task (TID 1) input split: file:/home/abhilash/Spark-Exercise-1/sample.txt:41+41
+26/07/29 13:59:18 INFO SecurityManager: Changing view acls to: abhilash
+26/07/29 13:59:18 INFO SecurityManager: Changing modify acls to: abhilash
+26/07/29 13:59:18 INFO SecurityManager: Changing view acls groups to: abhilash
+26/07/29 13:59:18 INFO SecurityManager: Changing modify acls groups to: abhilash
+26/07/29 13:59:18 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: abhilash groups with view permissions: EMPTY; users with modify permissions: abhilash; groups with modify permissions: EMPTY; RPC SSL disabled
+26/07/29 13:59:19 INFO PythonRunner: Times: total = 1170, boot = 956, init = 213, finish = 1
+26/07/29 13:59:19 INFO PythonRunner: Times: total = 1170, boot = 948, init = 221, finish = 1
+26/07/29 13:59:19 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1887 bytes result sent to driver
+26/07/29 13:59:19 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1887 bytes result sent to driver
+26/07/29 13:59:19 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1768 ms on 10.255.255.254 (executor driver) (1/2)
+26/07/29 13:59:19 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1736 ms on 10.255.255.254 (executor driver) (2/2)
+26/07/29 13:59:19 INFO TaskSchedulerImpl: Removed TaskSet 0.0 whose tasks have all completed, from pool 
+26/07/29 13:59:19 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 46649
+26/07/29 13:59:19 INFO DAGScheduler: ShuffleMapStage 0 (reduceByKey at /home/abhilash/Spark-Exercise-1/challenge1.py:11) finished in 1927 ms
+26/07/29 13:59:19 INFO DAGScheduler: looking for newly runnable stages
+26/07/29 13:59:19 INFO DAGScheduler: running: HashSet()
+26/07/29 13:59:19 INFO DAGScheduler: waiting: HashSet(ResultStage 1)
+26/07/29 13:59:19 INFO DAGScheduler: failed: HashSet()
+26/07/29 13:59:19 INFO DAGScheduler: Missing parents found for ResultStage 1: List()
+26/07/29 13:59:19 INFO DAGScheduler: Submitting ResultStage 1 (PythonRDD[6] at collect at /home/abhilash/Spark-Exercise-1/challenge1.py:15), which has no missing parents
+26/07/29 13:59:19 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 10.4 KiB, free 434.1 MiB)
+26/07/29 13:59:19 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 434.1 MiB)
+26/07/29 13:59:19 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1686
+26/07/29 13:59:19 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (PythonRDD[6] at collect at /home/abhilash/Spark-Exercise-1/challenge1.py:15) (first 15 tasks are for partitions Vector(0, 1))
+26/07/29 13:59:19 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+26/07/29 13:59:19 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2) (10.255.255.254,executor driver, partition 0, NODE_LOCAL, 9449 bytes) 
+26/07/29 13:59:19 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3) (10.255.255.254,executor driver, partition 1, NODE_LOCAL, 9449 bytes) 
+26/07/29 13:59:19 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+26/07/29 13:59:19 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+26/07/29 13:59:19 INFO ShuffleBlockFetcherIterator: Getting 2 (160.0 B) non-empty blocks including 2 (160.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/07/29 13:59:19 INFO ShuffleBlockFetcherIterator: Getting 2 (223.0 B) non-empty blocks including 2 (223.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/07/29 13:59:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 18 ms
+26/07/29 13:59:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 18 ms
+26/07/29 13:59:19 INFO PythonRunner: Times: total = 124, boot = -447, init = 570, finish = 1
+26/07/29 13:59:19 INFO PythonRunner: Times: total = 125, boot = -449, init = 573, finish = 1
+26/07/29 13:59:19 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 2421 bytes result sent to driver
+26/07/29 13:59:19 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 2356 bytes result sent to driver
+26/07/29 13:59:19 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 218 ms on 10.255.255.254 (executor driver) (1/2)
+26/07/29 13:59:19 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 229 ms on 10.255.255.254 (executor driver) (2/2)
+26/07/29 13:59:19 INFO TaskSchedulerImpl: Removed TaskSet 1.0 whose tasks have all completed, from pool 
+26/07/29 13:59:19 INFO DAGScheduler: ResultStage 1 (collect at /home/abhilash/Spark-Exercise-1/challenge1.py:15) finished in 250 ms
+26/07/29 13:59:19 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+26/07/29 13:59:19 INFO TaskSchedulerImpl: Canceling stage 1
+26/07/29 13:59:19 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+26/07/29 13:59:19 INFO DAGScheduler: Job 0 finished: collect at /home/abhilash/Spark-Exercise-1/challenge1.py:15, took 2293.412526 ms
+powerful: 1
+easy: 1
+Hello: 2
+Spark: 3
+Data: 2
+makes: 1
+processing: 1
+26/07/29 13:59:19 INFO SparkContext: SparkContext is stopping with exitCode 0 from stop at NativeMethodAccessorImpl.java:0.
+26/07/29 13:59:19 INFO SparkUI: Stopped Spark web UI at http://10.255.255.254:4040
+26/07/29 13:59:19 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/07/29 13:59:19 INFO MemoryStore: MemoryStore cleared
+26/07/29 13:59:19 INFO BlockManager: BlockManager stopped
+26/07/29 13:59:19 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/07/29 13:59:19 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/07/29 13:59:19 INFO SparkContext: Successfully stopped SparkContext (Uptime: 8659 ms)

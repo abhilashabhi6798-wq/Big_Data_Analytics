@@ -1,0 +1,4 @@
+Hello Spark
+Spark is powerful
+Hello Big Data
+Spark makes Big Data processing easy
