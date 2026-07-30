@@ -1,0 +1,73 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/07/29 17:06:59 WARN Utils: Your hostname, Abhilash, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/07/29 17:06:59 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/07/29 17:06:59 INFO SparkContext: Running Spark version 4.1.1
+26/07/29 17:06:59 INFO SparkContext: OS info Linux, 6.18.33.1-microsoft-standard-WSL2, amd64
+26/07/29 17:06:59 INFO SparkContext: Java version 21.0.11+10-1-24.04.2-Ubuntu
+26/07/29 17:06:59 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/07/29 17:06:59 INFO ResourceUtils: ==============================================================
+26/07/29 17:06:59 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/07/29 17:06:59 INFO ResourceUtils: ==============================================================
+26/07/29 17:06:59 INFO SparkContext: Submitted application: Spark Optimization Techniques
+26/07/29 17:07:00 INFO SecurityManager: Changing view acls to: abhilash
+26/07/29 17:07:00 INFO SecurityManager: Changing modify acls to: abhilash
+26/07/29 17:07:00 INFO SecurityManager: Changing view acls groups to: abhilash
+26/07/29 17:07:00 INFO SecurityManager: Changing modify acls groups to: abhilash
+26/07/29 17:07:00 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: abhilash groups with view permissions: EMPTY; users with modify permissions: abhilash; groups with modify permissions: EMPTY; RPC SSL disabled
+26/07/29 17:07:00 INFO Utils: Successfully started service 'sparkDriver' on port 37091.
+26/07/29 17:07:00 INFO SparkEnv: Registering MapOutputTracker
+26/07/29 17:07:00 INFO SparkEnv: Registering BlockManagerMaster
+26/07/29 17:07:00 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/07/29 17:07:00 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/07/29 17:07:00 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/07/29 17:07:00 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-b759050f-5284-4e92-b540-c1f91b21524a
+26/07/29 17:07:00 INFO SparkEnv: Registering OutputCommitCoordinator
+26/07/29 17:07:01 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/07/29 17:07:01 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/07/29 17:07:01 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/07/29 17:07:01 INFO ResourceProfile: Limiting resource is cpu
+26/07/29 17:07:01 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/07/29 17:07:01 INFO SecurityManager: Changing view acls to: abhilash
+26/07/29 17:07:01 INFO SecurityManager: Changing modify acls to: abhilash
+26/07/29 17:07:01 INFO SecurityManager: Changing view acls groups to: abhilash
+26/07/29 17:07:01 INFO SecurityManager: Changing modify acls groups to: abhilash
+26/07/29 17:07:01 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: abhilash groups with view permissions: EMPTY; users with modify permissions: abhilash; groups with modify permissions: EMPTY; RPC SSL disabled
+26/07/29 17:07:01 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/07/29 17:07:01 INFO Executor: OS info Linux, 6.18.33.1-microsoft-standard-WSL2, amd64
+26/07/29 17:07:01 INFO Executor: Java version 21.0.11+10-1-24.04.2-Ubuntu
+26/07/29 17:07:01 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/07/29 17:07:01 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@40a342ed for default.
+26/07/29 17:07:01 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44149.
+26/07/29 17:07:01 INFO NettyBlockTransferService: Server created on 10.255.255.254:44149
+26/07/29 17:07:01 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/07/29 17:07:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 44149, None)
+26/07/29 17:07:01 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:44149 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 44149, None)
+26/07/29 17:07:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 44149, None)
+26/07/29 17:07:01 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 44149, None)
+
+=== ORIGINAL DATA ===
++---+---+-----+
+| id|key|value|
++---+---+-----+
+|  1|  A|  100|
+|  2|  A|  150|
+|  3|  A|  200|
+|  4|  B|  120|
+|  5|  B|  180|
+|  6|  C|  250|
+|  7|  C|  300|
+|  8|  D|  175|
+|  9|  D|  225|
+| 10|  E|  400|
++---+---+-----+
+
+Original partitions: 1
+Partitions after repartition: 4
+Partitions after coalesce: 2
+DataFrame cached successfully
+26/07/29 17:07:13 WARN CacheManager: Asked to cache already cached data.
+DataFrame persisted successfully
+Adaptive Query Execution: true
+Shuffle partitions: 4

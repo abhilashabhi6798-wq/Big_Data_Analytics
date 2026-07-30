@@ -1,0 +1,107 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/07/29 17:07:16 WARN Utils: Your hostname, Abhilash, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/07/29 17:07:16 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/07/29 17:07:18 INFO SparkContext: Running Spark version 4.1.1
+26/07/29 17:07:18 INFO SparkContext: OS info Linux, 6.18.33.1-microsoft-standard-WSL2, amd64
+26/07/29 17:07:18 INFO SparkContext: Java version 21.0.11+10-1-24.04.2-Ubuntu
+26/07/29 17:07:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/07/29 17:07:19 INFO ResourceUtils: ==============================================================
+26/07/29 17:07:19 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/07/29 17:07:19 INFO ResourceUtils: ==============================================================
+26/07/29 17:07:19 INFO SparkContext: Submitted application: Broadcast Join Optimization
+26/07/29 17:07:19 INFO SecurityManager: Changing view acls to: abhilash
+26/07/29 17:07:19 INFO SecurityManager: Changing modify acls to: abhilash
+26/07/29 17:07:19 INFO SecurityManager: Changing view acls groups to: abhilash
+26/07/29 17:07:19 INFO SecurityManager: Changing modify acls groups to: abhilash
+26/07/29 17:07:19 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: abhilash groups with view permissions: EMPTY; users with modify permissions: abhilash; groups with modify permissions: EMPTY; RPC SSL disabled
+26/07/29 17:07:20 INFO Utils: Successfully started service 'sparkDriver' on port 33199.
+26/07/29 17:07:20 INFO SparkEnv: Registering MapOutputTracker
+26/07/29 17:07:20 INFO SparkEnv: Registering BlockManagerMaster
+26/07/29 17:07:20 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/07/29 17:07:20 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/07/29 17:07:20 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/07/29 17:07:20 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-ed633f5f-f1d3-4f4e-a966-7e0b3b8445f5
+26/07/29 17:07:20 INFO SparkEnv: Registering OutputCommitCoordinator
+26/07/29 17:07:20 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/07/29 17:07:20 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/07/29 17:07:20 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/07/29 17:07:20 INFO ResourceProfile: Limiting resource is cpu
+26/07/29 17:07:20 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/07/29 17:07:20 INFO SecurityManager: Changing view acls to: abhilash
+26/07/29 17:07:20 INFO SecurityManager: Changing modify acls to: abhilash
+26/07/29 17:07:20 INFO SecurityManager: Changing view acls groups to: abhilash
+26/07/29 17:07:20 INFO SecurityManager: Changing modify acls groups to: abhilash
+26/07/29 17:07:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: abhilash groups with view permissions: EMPTY; users with modify permissions: abhilash; groups with modify permissions: EMPTY; RPC SSL disabled
+26/07/29 17:07:21 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/07/29 17:07:21 INFO Executor: OS info Linux, 6.18.33.1-microsoft-standard-WSL2, amd64
+26/07/29 17:07:21 INFO Executor: Java version 21.0.11+10-1-24.04.2-Ubuntu
+26/07/29 17:07:21 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/07/29 17:07:21 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@5fa40df1 for default.
+26/07/29 17:07:21 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37531.
+26/07/29 17:07:21 INFO NettyBlockTransferService: Server created on 10.255.255.254:37531
+26/07/29 17:07:21 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/07/29 17:07:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 37531, None)
+26/07/29 17:07:21 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:37531 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 37531, None)
+26/07/29 17:07:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 37531, None)
+26/07/29 17:07:21 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 37531, None)
+
+=== LARGE DATASET ===
++---+---+-----+
+| id|key|value|
++---+---+-----+
+|  1|  A|  100|
+|  2|  A|  150|
+|  3|  A|  200|
+|  4|  B|  120|
+|  5|  B|  180|
+|  6|  C|  250|
+|  7|  C|  300|
+|  8|  D|  175|
+|  9|  D|  225|
+| 10|  E|  400|
++---+---+-----+
+
+
+=== SMALL DATASET ===
++---+-----------+
+|key|   category|
++---+-----------+
+|  A|Electronics|
+|  B|   Clothing|
+|  C|       Food|
+|  D|      Books|
+|  E|     Sports|
++---+-----------+
+
+
+=== BROADCAST JOIN RESULT ===
++---+---+-----+-----------+
+|key| id|value|   category|
++---+---+-----+-----------+
+|  A|  1|  100|Electronics|
+|  A|  2|  150|Electronics|
+|  A|  3|  200|Electronics|
+|  B|  4|  120|   Clothing|
+|  B|  5|  180|   Clothing|
+|  C|  6|  250|       Food|
+|  C|  7|  300|       Food|
+|  D|  8|  175|      Books|
+|  D|  9|  225|      Books|
+|  E| 10|  400|     Sports|
++---+---+-----+-----------+
+
+
+=== EXECUTION PLAN ===
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- Project [key#18, id#17, value#19, category#38]
+   +- BroadcastHashJoin [key#18], [key#37], Inner, BuildRight, false
+      :- Filter isnotnull(key#18)
+      :  +- FileScan csv [id#17,key#18,value#19] Batched: false, DataFilters: [isnotnull(key#18)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/abhilash/Spark-Exercise-9/data.csv], PartitionFilters: [], PushedFilters: [IsNotNull(key)], ReadSchema: struct<id:int,key:string,value:int>
+      +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=164]
+         +- Filter isnotnull(key#37)
+            +- FileScan csv [key#37,category#38] Batched: false, DataFilters: [isnotnull(key#37)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/abhilash/Spark-Exercise-9/small_table.csv], PartitionFilters: [], PushedFilters: [IsNotNull(key)], ReadSchema: struct<key:string,category:string>
+
+
