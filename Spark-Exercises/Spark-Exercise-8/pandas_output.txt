@@ -1,0 +1,78 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/07/29 15:19:32 WARN Utils: Your hostname, Abhilash, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/07/29 15:19:32 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/07/29 15:19:35 INFO SparkContext: Running Spark version 4.1.1
+26/07/29 15:19:35 INFO SparkContext: OS info Linux, 6.18.33.1-microsoft-standard-WSL2, amd64
+26/07/29 15:19:35 INFO SparkContext: Java version 21.0.11+10-1-24.04.2-Ubuntu
+26/07/29 15:19:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/07/29 15:19:35 INFO ResourceUtils: ==============================================================
+26/07/29 15:19:35 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/07/29 15:19:35 INFO ResourceUtils: ==============================================================
+26/07/29 15:19:35 INFO SparkContext: Submitted application: Pandas UDF Text Cleaning
+26/07/29 15:19:35 INFO SecurityManager: Changing view acls to: abhilash
+26/07/29 15:19:35 INFO SecurityManager: Changing modify acls to: abhilash
+26/07/29 15:19:35 INFO SecurityManager: Changing view acls groups to: abhilash
+26/07/29 15:19:35 INFO SecurityManager: Changing modify acls groups to: abhilash
+26/07/29 15:19:35 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: abhilash groups with view permissions: EMPTY; users with modify permissions: abhilash; groups with modify permissions: EMPTY; RPC SSL disabled
+26/07/29 15:19:36 INFO Utils: Successfully started service 'sparkDriver' on port 36771.
+26/07/29 15:19:36 INFO SparkEnv: Registering MapOutputTracker
+26/07/29 15:19:36 INFO SparkEnv: Registering BlockManagerMaster
+26/07/29 15:19:36 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/07/29 15:19:36 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/07/29 15:19:36 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/07/29 15:19:36 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-e716fbb6-f002-4680-affd-a3b8b52826ce
+26/07/29 15:19:36 INFO SparkEnv: Registering OutputCommitCoordinator
+26/07/29 15:19:36 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/07/29 15:19:36 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/07/29 15:19:36 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/07/29 15:19:36 INFO ResourceProfile: Limiting resource is cpu
+26/07/29 15:19:36 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/07/29 15:19:36 INFO SecurityManager: Changing view acls to: abhilash
+26/07/29 15:19:36 INFO SecurityManager: Changing modify acls to: abhilash
+26/07/29 15:19:36 INFO SecurityManager: Changing view acls groups to: abhilash
+26/07/29 15:19:36 INFO SecurityManager: Changing modify acls groups to: abhilash
+26/07/29 15:19:36 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: abhilash groups with view permissions: EMPTY; users with modify permissions: abhilash; groups with modify permissions: EMPTY; RPC SSL disabled
+26/07/29 15:19:37 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/07/29 15:19:37 INFO Executor: OS info Linux, 6.18.33.1-microsoft-standard-WSL2, amd64
+26/07/29 15:19:37 INFO Executor: Java version 21.0.11+10-1-24.04.2-Ubuntu
+26/07/29 15:19:37 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/07/29 15:19:37 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@178d868b for default.
+26/07/29 15:19:37 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36635.
+26/07/29 15:19:37 INFO NettyBlockTransferService: Server created on 10.255.255.254:36635
+26/07/29 15:19:37 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/07/29 15:19:37 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 36635, None)
+26/07/29 15:19:37 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:36635 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 36635, None)
+26/07/29 15:19:37 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 36635, None)
+26/07/29 15:19:37 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 36635, None)
+
+=== ORIGINAL DATA ===
++---+----------+---------------------------------+
+|id |category  |text                             |
++---+----------+---------------------------------+
+|1  |Technology|Hello Spark!!!                   |
+|2  |Technology|PySpark is @powerful.            |
+|3  |Education |Learn Big Data #today            |
+|4  |Education |Spark makes data processing easy!|
+|5  |Business  |Sales increased by 20%!!!        |
+|6  |Business  |Big Data helps businesses.       |
+|7  |Technology|Machine Learning & Spark         |
+|8  |Education |Learn Python @home               |
++---+----------+---------------------------------+
+
+
+=== CLEANED DATA USING PANDAS UDF ===
++---+----------+---------------------------------+--------------------------------+
+|id |category  |text                             |cleaned_text                    |
++---+----------+---------------------------------+--------------------------------+
+|1  |Technology|Hello Spark!!!                   |Hello Spark                     |
+|2  |Technology|PySpark is @powerful.            |PySpark is powerful             |
+|3  |Education |Learn Big Data #today            |Learn Big Data today            |
+|4  |Education |Spark makes data processing easy!|Spark makes data processing easy|
+|5  |Business  |Sales increased by 20%!!!        |Sales increased by 20           |
+|6  |Business  |Big Data helps businesses.       |Big Data helps businesses       |
+|7  |Technology|Machine Learning & Spark         |Machine Learning  Spark         |
+|8  |Education |Learn Python @home               |Learn Python home               |
++---+----------+---------------------------------+--------------------------------+
+
