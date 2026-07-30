@@ -1,0 +1,35 @@
+SPARK EXERCISE 7 - GRAPH PROCESSING WITH GRAPHX
+
+Users:
+(1,(John,30))
+(2,(Jane,25))
+(3,(Bob,35))
+
+Relationships:
+Edge(1,2,follows)
+Edge(2,3,follows)
+Edge(1,3,friend)
+
+PageRank:
+[Paste the PageRank values obtained from Spark]
+
+Connected Components:
+(1,1)
+(2,1)
+(3,1)
+
+Triangle Count:
+[Paste the triangle-count output obtained from Spark]
+
+Degrees:
+(1,2)
+(2,2)
+(3,2)
+
+In Degrees:
+(2,1)
+(3,2)
+
+Out Degrees:
+(1,2)
+(2,1)
